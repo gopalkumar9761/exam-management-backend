@@ -1,12 +1,12 @@
-# Stage 1: Build the application using standard maven command
-FROM maven:3.8.5-openjdk-17 AS build
+# Stage 1: Build the application using Java 21 and Maven
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Stage 2: Run the application
-FROM eclipse-temurin:17-jre
+# Stage 2: Run the application with Java 21 JRE
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
