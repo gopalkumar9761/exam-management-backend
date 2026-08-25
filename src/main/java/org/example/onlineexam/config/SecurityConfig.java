@@ -33,6 +33,7 @@ public class SecurityConfig {
             "http://localhost:5173", 
             "http://localhost:5174", 
             "https://exam-management-frontend-seven.vercel.app" // Vercel Live URL added
+            "https://exam-management-frontend-sooty.vercel.app"
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
