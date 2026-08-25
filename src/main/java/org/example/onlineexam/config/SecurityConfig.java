@@ -32,7 +32,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(List.of(
             "http://localhost:5173", 
             "http://localhost:5174", 
-            "https://exam-management-frontend-seven.vercel.app" // Vercel Live URL added
+            "https://acetexam.vercel.app" // Vercel Live URL added
             "https://acetexam.vercel.app"
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
